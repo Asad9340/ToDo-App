@@ -33,7 +33,7 @@ function Input({ handleBtnClick }) {
           onChange={handleTodoChange}
         />
       </div>
-      <div className="col-span-4">
+      <div className="col-span-3">
         <input
           className="w-full h-12 pl-2 rounded-lg duration-200 border border-gray-900"
           type="time"
