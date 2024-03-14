@@ -13,11 +13,11 @@ const [todoItems,setTodoItems] =useState([])
     setTodoItems(newTodoItems)
   }
   return (
-    <>
+    <div className='flex flex-col justify-center items-center'>
       <Header></Header>
       <Input handleBtnClick={handleBtnClick}></Input>
       <Items todoItems={todoItems} handleDelete={handleDelete}></Items>
-    </>
+    </div>
   );
 }
 
