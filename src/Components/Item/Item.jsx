@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line react/prop-types
-function Item({ item }) {
+function Item({ item, handleDelete }) {
   console.log(item);
   const { name, dueDate } = item;
   return (
@@ -12,7 +12,10 @@ function Item({ item }) {
         <h2>{dueDate}</h2>
       </div>
       <div className="col-span-2">
-        <button className="bg-red-800 py-3 px-4 text-white rounded-lg outline-none font-semibold hover:bg-red-700 active:bg-red-950 duration-200  md:w-28">
+        <button
+          onClick={()=>handleDelete(name)}
+          className="bg-red-800 py-3 px-4 text-white rounded-lg outline-none font-semibold hover:bg-red-700 active:bg-red-950 duration-200  md:w-28"
+        >
           Delete
         </button>
       </div>

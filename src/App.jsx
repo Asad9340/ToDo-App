@@ -8,11 +8,15 @@ const [todoItems,setTodoItems] =useState([])
     const newTodoItems=[...todoItems,{name:todo,dueDate:dateTime}]
     setTodoItems(newTodoItems);
   };
+  const handleDelete = (todoItem) => {
+    const newTodoItems = todoItems.filter(todo => todo.name !== todoItem);
+    setTodoItems(newTodoItems)
+  }
   return (
     <>
       <Header></Header>
       <Input handleBtnClick={handleBtnClick}></Input>
-      <Items todoItems={todoItems}></Items>
+      <Items todoItems={todoItems} handleDelete={handleDelete}></Items>
     </>
   );
 }
