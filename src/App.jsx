@@ -1,13 +1,18 @@
+import { useState } from 'react';
 import Header from './Components/Header/Header.jsx';
 import Input from './Components/Input/Input.jsx';
-import Item from './Components/Item/Item';
-
+import Items from './Components/Items.jsx';
 function App() {
+const [todoItems,setTodoItems] =useState([])
+  const handleBtnClick = (todo, dateTime) => {
+    const newTodoItems=[...todoItems,{name:todo,dueDate:dateTime}]
+    setTodoItems(newTodoItems);
+  };
   return (
     <>
-      <Header />
-      <Input />
-      <Item />
+      <Header></Header>
+      <Input handleBtnClick={handleBtnClick}></Input>
+      <Items todoItems={todoItems}></Items>
     </>
   );
 }
