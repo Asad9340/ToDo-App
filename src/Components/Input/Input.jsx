@@ -36,7 +36,7 @@ function Input({ handleBtnClick }) {
       <div className="col-span-3">
         <input
           className="w-full h-12 pl-2 rounded-lg duration-200 border border-gray-900"
-          type="time"
+          type="datetime-local"
           name=""
           placeholder="Enter ToDo text"
           id=""

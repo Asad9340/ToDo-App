@@ -5,10 +5,10 @@ function Item({ item, handleDelete }) {
   const { name, dueDate } = item;
   return (
     <div className="grid gap-2 md:gap-10 grid-cols-12 mx-4 md:mx-10 mt-4">
-      <div className="col-span-6 border flex items-center rounded-lg pl-4 hover:bg-gray-900 hover:text-white duration-300">
+      <div className="col-span-5 border flex items-center rounded-lg pl-4 hover:bg-gray-900 hover:text-white duration-300">
         <h2>{name}</h2>
       </div>
-      <div className="col-span-3 border flex items-center rounded-lg pl-4 hover:bg-gray-900 hover:text-white duration-300">
+      <div className="col-span-4 border flex items-center rounded-lg pl-4 hover:bg-gray-900 hover:text-white duration-300">
         <h2>{dueDate}</h2>
       </div>
       <div className="col-span-2">
